@@ -1,0 +1,20 @@
+export const fakeContent = {
+  mediumText: [
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vel arcu vel magna tincidunt aliquam. Suspendisse potenti. Integer lacinia, justo sit amet egestas porta, lorem urna ultrices nibh, sed tincidunt felis augue sed erat. Vivamus vestibulum libero sit amet sem ultricies, a placerat massa fringilla.",
+    "Nulla et est viverra, porta nisl sed, ultricies nulla. Aliquam malesuada pulvinar velit, sit amet convallis nunc pharetra lacinia. Sed ut finibus lorem. Nullam eu quam eget nisl dapibus rhoncus in ut mi. Proin id varius ex. Donec commodo nibh eros, sed euismod urna accumsan eget. Fusce faucibus pulvinar justo.",
+  ],
+  longTexts: [
+    `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.`,
+    `Duis at dolor lorem. Nam imperdiet rhoncus sapien eu consectetur. Donec ac suscipit nibh. Cras laoreet quis leo ac vulputate. Nulla facilisi. Quisque sit amet est eget massa fringilla lobortis in et ante. Sed dictum posuere augue. Vivamus accumsan, magna bibendum mattis fermentum, nisi arcu tincidunt neque, eget pharetra nulla sapien sed eros. Morbi accumsan fringilla nisl sit amet elementum. Cras in blandit erat. Vestibulum condimentum lorem tortor, posuere fringilla nibh placerat id. Quisque interdum, velit nec vulputate viverra, enim sem molestie dolor, nec luctus eros mauris vitae urna. Donec aliquet massa leo, a consequat mi convallis eu. Integer mollis massa mi, sit amet suscipit purus venenatis quis. Curabitur mattis purus non nisl ullamcorper, in blandit tellus tempor.`,
+    "Fusce id arcu faucibus, hendrerit sem id, cursus purus. Duis imperdiet convallis dui, ac aliquet nisi ornare id. Nunc leo lectus, ornare quis augue eget, molestie consectetur nisl. Pellentesque et gravida dolor, nec ultricies odio. Duis maximus sollicitudin ante quis laoreet. Sed nec nulla in risus accumsan consectetur. Vestibulum turpis libero, tempus in ornare vel, ultricies fermentum metus. Praesent ac elit elit. Nullam sed mauris a elit venenatis hendrerit. Aliquam vitae urna erat. Phasellus in fringilla orci. Nullam justo nisi, auctor eu leo eu, volutpat molestie magna. Curabitur iaculis dolor at est aliquam, sed accumsan augue fringilla. Morbi ut dolor risus. Suspendisse lobortis justo malesuada diam pretium, sit amet accumsan neque laoreet. Mauris sagittis convallis gravida.",
+    "Aliquam erat volutpat. Vivamus egestas tempor tellus, a fermentum leo pretium ut. Proin mollis sed metus sed lacinia. Nam tristique blandit semper. Aliquam a luctus felis. Integer ut metus vulputate, fringilla felis et, vestibulum neque. Integer sodales eu magna non lacinia. Aenean semper faucibus vestibulum. Morbi finibus mauris ante. Ut sagittis dictum dolor vitae egestas. Nunc vel pretium turpis. Nunc bibendum elit vel libero varius sodales. Vivamus eu sapien venenatis sapien posuere hendrerit vel non eros. Sed molestie tristique turpis venenatis ultrices. Morbi mauris libero, commodo non mattis nec, bibendum at ante.Nam condimentum dui ut ante ultricies, ac viverra ligula sollicitudin. Nam nisl dolor, ornare ac libero nec, fringilla pharetra risus. Nulla nunc justo, laoreet eu dui at, dapibus scelerisque quam. Nunc non odio ac tellus vestibulum interdum et quis nunc.",
+  ],
+
+  titles: [
+    "Lorem Ipsum Dolor Sit Amet",
+    "Consectetur Adipiscing Elit",
+    "Sed Do Eiusmod Tempor Incididunt",
+    "Ut Enim Ad Minim Veniam",
+    "Duis Aute Irure Dolor in Reprehenderit",
+  ],
+};
