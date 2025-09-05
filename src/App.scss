@@ -1,0 +1,20 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  overflow: hidden;
+  width: 100%;
+}
+
+.appWrapper {
+  position: relative;
+  width: 100%;
+}
+
+#smooth-content {
+  height: 500vh;
+  overflow: visible;
+}

@@ -1,6 +1,6 @@
 export const fakeContent = {
   mediumText: [
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vel arcu vel magna tincidunt aliquam. Suspendisse potenti. Integer lacinia, justo sit amet egestas porta, lorem urna ultrices nibh, sed tincidunt felis augue sed erat. Vivamus vestibulum libero sit amet sem ultricies, a placerat massa fringilla.",
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vel arcu vel magna tincidunt aliquam. Suspendisse potenti. ",
     "Nulla et est viverra, porta nisl sed, ultricies nulla. Aliquam malesuada pulvinar velit, sit amet convallis nunc pharetra lacinia. Sed ut finibus lorem. Nullam eu quam eget nisl dapibus rhoncus in ut mi. Proin id varius ex. Donec commodo nibh eros, sed euismod urna accumsan eget. Fusce faucibus pulvinar justo.",
   ],
   longTexts: [
