@@ -5,6 +5,8 @@ import { ScrollTrigger, SplitText, ScrollSmoother } from "gsap/all";
 import gsap from "gsap";
 import { useRef } from "react";
 import SecImgSrc from "../../assets/images/img3.jpg";
+import { Canvas } from "@react-three/fiber";
+import { Scene } from "../CubesBackground";
 
 export const AboutSection = () => {
   const longTextRef = useRef();
@@ -59,7 +61,7 @@ export const AboutSection = () => {
       scrollTrigger: {
         trigger: longTextRef.current,
         start: "top 20%",
-        scrub:true,
+        scrub: true,
         // end:'bottom 20%',
         // markers: true,
       },
@@ -97,6 +99,11 @@ export const AboutSection = () => {
   }, []);
   return (
     <section className="aboutSection">
+      <div data-lag={2} id="cubeCanvas" className="cubeCanvas">
+        <Canvas camera={{ position: [0, 0, 8], fov: 60 }}>
+          <Scene />
+        </Canvas>
+      </div>
       <div className="titleTextSection">
         <h1 id="aboutTitle">About Us</h1>
         <p id="text">

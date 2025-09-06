@@ -2,7 +2,13 @@ import { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger, ScrollSmoother } from "gsap/all";
 import "./App.scss";
-import { AboutSection, HeroSection, ProjectsSection } from "./components";
+import {
+  AboutSection,
+  HeroSection,
+  ProjectsSection,
+  Scene,
+} from "./components";
+import { Canvas } from "@react-three/fiber";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
@@ -12,7 +18,7 @@ const App = () => {
       smooth: 2,
       effects: true,
       normalizeScroll: true,
-      smoothTouch:1,
+      smoothTouch: 1,
     });
 
     const wrapper = document.querySelector("#smooth-content");
@@ -36,13 +42,18 @@ const App = () => {
 
   return (
     <main className="appWrapper">
+      {/* <div className="cubesBg">
+        <Canvas className="canvas" camera={{ position: [0, 0, 8], fov: 0 }}>
+          <Scene />
+        </Canvas>
+      </div> */}
       {/* <LoadingSection /> */}
       <div id="smooth-wrapper">
         <div id="smooth-content">
-          {/* <div data-bg="gray" data-lag='1' >
+          <div data-lag="1">
             <HeroSection />
-          </div> */}
-          <div data-bg="#9b59b6">
+          </div>
+          <div >
             <AboutSection />
           </div>
           {/* <div data-bg="#9b59b6" >
