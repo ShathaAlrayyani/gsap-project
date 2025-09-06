@@ -1,4 +1,3 @@
-// import { fakeContent } from "../../constants";
 import { useGSAP } from "@gsap/react";
 import { fakeContent } from "../../constants";
 import "./AboutSection.scss";
@@ -8,49 +7,66 @@ import { useRef } from "react";
 import SecImgSrc from "../../assets/images/img3.jpg";
 
 export const AboutSection = () => {
-  const textWrapperRef = useRef();
+  // const textWrapperRef = useRef();
   const longTextRef = useRef();
 
   gsap.registerPlugin(ScrollSmoother, SplitText, ScrollTrigger);
   useGSAP(() => {
-    let split = SplitText.create("#text");
+    const titleSplit = SplitText.create("#aboutTitle");
+    const split = SplitText.create("#text");
     const longSplit = SplitText.create("#longText");
 
     ScrollSmoother.create({
       smooth: 2,
       effects: true,
       normalizeScroll: true,
-      smoothTouch: 1,
     });
 
-    const tl = gsap.timeline();
-    tl.from(split.chars, {
-      color: "gray",
+    // const tl = gsap.timeline();
+    gsap.from(titleSplit.chars, {
+      // opacity: 0,
+      y: -100,
+      autoAlpha: 0,
       stagger: 0.05,
+      delay: 1,
       scrollTrigger: {
-        trigger: textWrapperRef.current,
+        trigger: ".aboutSection",
+        toggleActions: "restart reverse restart reverse",
+        start: "top 95%",
+        end: "bottom bottom",
+        markers: true,
+      },
+    });
+
+    gsap.from(split.chars, {
+      color: "gray",
+      stagger: 0.01,
+      scrollTrigger: {
+        trigger: ".aboutSection",
+        toggleActions: "restart reverse restart reverse",
+        start: "top 40%",
+        end: "bottom 80%",
+        markers: true,
+      },
+    });
+
+    gsap.from("#secImg", {
+      rotate: -180,
+      scale: 0.2,
+      opacity: 0,
+      x: 400,
+      scrollTrigger: {
+        trigger: longTextRef.current,
         scrub: true,
         start: "top 20%",
-        pin: true,
         // markers: true,
       },
     });
 
-    tl.from("#secImg", {
-      rotate: -45,
-      scrollTrigger: {
-        trigger: textWrapperRef.current,
-        scrub: true,
-        start: "top 30%",
-        end: "bottom 80%",
-        // markers: true,
-      },
-    });
-
-    tl.from(longSplit.chars, {
+    gsap.from(longSplit.chars, {
       color: "gray",
       opacity: 0,
-      y: 20,
+      y: 50,
       autoAlpha: 0,
       stagger: {
         from: "random",
@@ -59,27 +75,25 @@ export const AboutSection = () => {
       scrollTrigger: {
         trigger: longTextRef.current,
         scrub: true,
-        pin:true,
+        pin: true,
         start: "top 20%",
-        end: "bottom 80%",
       },
     });
   }, []);
   return (
     <section className="aboutSection">
-      <h1>About Us</h1>
-      <div ref={textWrapperRef} id="textWrapper">
+      <div className="titleTextSection">
+        <h1 id="aboutTitle">About Us</h1>
         <p id="text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br />
-          Phasellus vel arcu vel magna tincidunt aliquam. Suspendisse potenti.
-          <br />
-          Integer lacinia, justo sit amet egestas porta, lorem urna ultrices
-          <br />
-          nibh, sed tincidunt felis augue sed erat. Vivamus vestibulum libero
-          <br />
-          sit amet sem ultricies, a placerat massa fringilla.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vel
+          arcu vel magna tincidunt aliquam. Suspendisse potenti. Integer
+          lacinia, justo sit amet egestas porta, lorem urna ultrices nibh, sed
+          tincidunt felis augue sed erat. Vivamus vestibulum libero sit amet sem
+          ultricies, a placerat massa fringilla.
         </p>
-
+      </div>
+      <div ref={longTextRef} id="imgTextWrapper" className="imgTextWrapper">
+        <p id="longText">{fakeContent.mediumText[1]}</p>
         <img
           id="secImg"
           src={SecImgSrc}
@@ -87,9 +101,6 @@ export const AboutSection = () => {
           width={300}
           height={300}
         />
-        <p ref={longTextRef} id="longText">
-          {fakeContent.mediumText}
-        </p>
       </div>
       <div></div>
     </section>

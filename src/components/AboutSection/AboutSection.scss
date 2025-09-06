@@ -1,20 +1,40 @@
 .aboutSection {
-    padding: 16px;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 100%;
+  align-items: center;
 }
 
-#textWrapper {
-    display: flex;
-    flex-direction: column;
+.titleTextSection {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 32px;
+  height: 90vh;
+  justify-content: center;
+  align-items: center;
 }
 
-#secImg {
-    margin-top: 80px;
-    align-self: flex-end;
+#text,
+#longText {
+  color: white;
+  font-size: 24px;
 }
 
-#text , #longText{
-    color:white;
+#longText {
+  width: 100%;
+  @include respond(laptop) {
+    width: 50%;
+  }
+}
+
+.imgTextWrapper {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: space-around;
+  width: 100%;
 }

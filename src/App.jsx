@@ -24,6 +24,7 @@ const App = () => {
           trigger: section,
           start: "top 30%",
           end: "bottom 70%",
+          // markers:true,
           onEnter: () =>
             gsap.to(".appWrapper", { backgroundColor: color, duration: 1 }),
           onEnterBack: () =>
@@ -38,10 +39,10 @@ const App = () => {
       {/* <LoadingSection /> */}
       <div id="smooth-wrapper">
         <div id="smooth-content">
-          <div data-bg="gray" >
+          {/* <div data-bg="gray" data-lag='1' >
             <HeroSection />
-          </div>
-          <div data-bg="gray" >
+          </div> */}
+          <div data-bg="#9b59b6">
             <AboutSection />
           </div>
           {/* <div data-bg="#9b59b6" >
