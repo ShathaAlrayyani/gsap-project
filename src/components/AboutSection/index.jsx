@@ -34,7 +34,7 @@ export const AboutSection = () => {
         toggleActions: "restart reverse restart reverse",
         start: "top 95%",
         end: "bottom bottom",
-        markers: true,
+        // markers: true,
       },
     });
 
@@ -46,7 +46,7 @@ export const AboutSection = () => {
         toggleActions: "restart reverse restart reverse",
         start: "top 40%",
         end: "bottom 80%",
-        markers: true,
+        // markers: true,
       },
     });
 
