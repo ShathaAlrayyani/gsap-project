@@ -7,7 +7,6 @@ import { useRef } from "react";
 import SecImgSrc from "../../assets/images/img3.jpg";
 
 export const AboutSection = () => {
-  // const textWrapperRef = useRef();
   const longTextRef = useRef();
 
   gsap.registerPlugin(ScrollSmoother, SplitText, ScrollTrigger);
@@ -15,6 +14,7 @@ export const AboutSection = () => {
     const titleSplit = SplitText.create("#aboutTitle");
     const split = SplitText.create("#text");
     const longSplit = SplitText.create("#longText");
+    const secTitleSplit = SplitText.create("#secSectionTitle");
 
     ScrollSmoother.create({
       smooth: 2,
@@ -46,6 +46,21 @@ export const AboutSection = () => {
         toggleActions: "restart reverse restart reverse",
         start: "top 40%",
         end: "bottom 80%",
+        // markers: true,
+      },
+    });
+
+    gsap.from(secTitleSplit.chars, {
+      // opacity: 0,
+      y: -100,
+      autoAlpha: 0,
+      stagger: 0.05,
+      delay: 1,
+      scrollTrigger: {
+        trigger: longTextRef.current,
+        start: "top 20%",
+        scrub:true,
+        // end:'bottom 20%',
         // markers: true,
       },
     });
@@ -92,17 +107,19 @@ export const AboutSection = () => {
           ultricies, a placerat massa fringilla.
         </p>
       </div>
-      <div ref={longTextRef} id="imgTextWrapper" className="imgTextWrapper">
-        <p id="longText">{fakeContent.mediumText[1]}</p>
-        <img
-          id="secImg"
-          src={SecImgSrc}
-          alt="second Img"
-          width={300}
-          height={300}
-        />
+      <div className="secSectionWrapper" ref={longTextRef}>
+        <h1 id="secSectionTitle">{fakeContent.titles[0]}</h1>
+        <div className="imgTextWrapper">
+          <p id="longText">{fakeContent.mediumText[1]}</p>
+          <img
+            id="secImg"
+            src={SecImgSrc}
+            alt="second Img"
+            width={300}
+            height={300}
+          />
+        </div>
       </div>
-      <div></div>
     </section>
   );
 };
