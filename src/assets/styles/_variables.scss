@@ -13,6 +13,13 @@ $spindle-color: rgb(174 199 237);
 $white-color: rgb(255 255 255);
 $linear-background: linear-gradient(
   to bottom,
+  rgb(34, 33, 33) 0%,
+  rgb(26, 25, 25) 20%,
+  rgb(0 0 0 ) 100%
+);
+
+$linear-background-opacity35: linear-gradient(
+  to bottom,
   rgb(62 61 61 / 0.35) 0%,
   rgb(50 49 49 / 0.35) 20%,
   rgb(0 0 0 ) 100%

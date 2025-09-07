@@ -1,3 +1,8 @@
+import FirstImgSrc from "../assets/images/img1.jpg";
+import SecImgSrc from "../assets/images/img2.jpg";
+import ThirdImgSrc from "../assets/images/img3.jpg";
+import ForthImgSrc from "../assets/images/img4.jpg";
+
 export const fakeContent = {
   mediumText: [
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vel arcu vel magna tincidunt aliquam. Suspendisse potenti. ",
@@ -18,3 +23,22 @@ export const fakeContent = {
     "Duis Aute Irure Dolor in Reprehenderit",
   ],
 };
+
+export const heroSliderCont = [
+  {
+    src: FirstImgSrc,
+    title: "Consectetur Adipiscing Elit",
+  },
+  {
+    src: SecImgSrc,
+    title: "Ut Enim Ad Minim Veniam",
+  },
+  {
+    src: ThirdImgSrc,
+    title: "Duis Aute Irure Dolor",
+  },
+  {
+    src: ForthImgSrc,
+    title: "Sed Do Eiusmod Tempor",
+  },
+];

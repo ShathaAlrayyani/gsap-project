@@ -6,9 +6,7 @@ import {
   AboutSection,
   HeroSection,
   ProjectsSection,
-  Scene,
 } from "./components";
-import { Canvas } from "@react-three/fiber";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
@@ -50,9 +48,7 @@ const App = () => {
       {/* <LoadingSection /> */}
       <div id="smooth-wrapper">
         <div id="smooth-content">
-          <div data-lag="1">
             <HeroSection />
-          </div>
           <div >
             <AboutSection />
           </div>

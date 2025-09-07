@@ -24,7 +24,6 @@ export const AboutSection = () => {
       normalizeScroll: true,
     });
 
-    // const tl = gsap.timeline();
     gsap.from(titleSplit.chars, {
       // opacity: 0,
       y: -100,
@@ -34,8 +33,8 @@ export const AboutSection = () => {
       scrollTrigger: {
         trigger: ".aboutSection",
         toggleActions: "restart reverse restart reverse",
-        start: "top 95%",
-        end: "bottom bottom",
+        start: "top 85%",
+        end: "bottom 20%",
         // markers: true,
       },
     });
