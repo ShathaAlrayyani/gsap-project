@@ -1,7 +1,7 @@
 import { Flip, ScrollTrigger, SplitText, ScrollSmoother } from "gsap/all";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import CatIcon from "../../assets/logo.svg?react"
+import CatIcon from "../../assets/logo.svg?react";
 import "./HeroSection.scss";
 import { useRef, useState } from "react";
 import { heroSliderCont } from "../../constants";
@@ -16,10 +16,8 @@ export const HeroSection = () => {
 
   useGSAP(() => {
     const tl = gsap.timeline();
-
     const iconEle = iconWrapperRef.current?.firstElementChild;
     const state = Flip.getState(iconEle);
-
     gsap.to(loaderRef.current, {
       width: "100%",
       duration: 2,
@@ -101,7 +99,6 @@ export const HeroSection = () => {
       });
       tl.repeat(-1).repeatDelay(0); // infinite loop
     }
-
   }, [isLoading]);
 
   return (
@@ -135,14 +132,3 @@ export const HeroSection = () => {
     </section>
   );
 };
-
-
-
-
-
-
-
-
-
-
-

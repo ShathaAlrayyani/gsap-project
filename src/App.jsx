@@ -2,22 +2,24 @@ import { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger, ScrollSmoother } from "gsap/all";
 import "./App.scss";
-import {
-  AboutSection,
-  HeroSection,
-  ProjectsSection,
-} from "./components";
+import { AboutSection, HeroSection, ProjectsSection } from "./components";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 const App = () => {
   useEffect(() => {
-    ScrollSmoother.create({
+    const smoother = ScrollSmoother.create({
       smooth: 2,
       effects: true,
       normalizeScroll: true,
       smoothTouch: 1,
     });
+
+    smoother.paused(true);
+
+    setTimeout(() => {
+      smoother.paused(false);
+    }, 4000);
 
     const wrapper = document.querySelector("#smooth-content");
     if (wrapper) {
@@ -40,19 +42,13 @@ const App = () => {
 
   return (
     <main className="appWrapper">
-      {/* <div className="cubesBg">
-        <Canvas className="canvas" camera={{ position: [0, 0, 8], fov: 0 }}>
-          <Scene />
-        </Canvas>
-      </div> */}
-      {/* <LoadingSection /> */}
       <div id="smooth-wrapper">
         <div id="smooth-content">
-            <HeroSection />
-          <div >
+          <HeroSection />
+          <div>
             <AboutSection />
           </div>
-          {/* <div data-bg="#9b59b6" >
+          {/* <div data-lag="1">
             <ProjectsSection />
           </div> */}
         </div>
