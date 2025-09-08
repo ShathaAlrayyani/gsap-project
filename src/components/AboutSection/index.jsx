@@ -7,6 +7,7 @@ import { useRef } from "react";
 import SecImgSrc from "../../assets/images/img3.jpg";
 import { Canvas } from "@react-three/fiber";
 import { Scene } from "../CubesBackground";
+import { animateGrayToWhiteText } from "../../utils/animations";
 
 export const AboutSection = () => {
   const longTextRef = useRef();
@@ -29,12 +30,11 @@ export const AboutSection = () => {
       y: -100,
       autoAlpha: 0,
       stagger: 0.05,
-      delay: 1,
       scrollTrigger: {
         trigger: ".aboutSection",
         toggleActions: "restart reverse restart reverse",
-        start: "top 85%",
-        end: "bottom 20%",
+        start: "top 40%",
+        end: "bottom 80%",
         // markers: true,
       },
     });
@@ -45,7 +45,7 @@ export const AboutSection = () => {
       scrollTrigger: {
         trigger: ".aboutSection",
         toggleActions: "restart reverse restart reverse",
-        start: "top 40%",
+        start: "top 80%",
         end: "bottom 80%",
         // markers: true,
       },
@@ -59,14 +59,14 @@ export const AboutSection = () => {
       delay: 1,
       scrollTrigger: {
         trigger: longTextRef.current,
-        start: "top 20%",
+        start: "top 10%",
         scrub: true,
         // end:'bottom 20%',
         // markers: true,
       },
     });
 
-    gsap.from("#secImg", {
+    gsap.from("#aboutImg", {
       rotate: -180,
       scale: 0.2,
       opacity: 0,
@@ -79,22 +79,7 @@ export const AboutSection = () => {
       },
     });
 
-    gsap.from(longSplit.chars, {
-      color: "gray",
-      opacity: 0,
-      y: 50,
-      autoAlpha: 0,
-      stagger: {
-        from: "random",
-        amount: 2,
-      },
-      scrollTrigger: {
-        trigger: longTextRef.current,
-        scrub: true,
-        pin: true,
-        start: "top 20%",
-      },
-    });
+    animateGrayToWhiteText(longSplit.chars, longTextRef.current);
   }, []);
   return (
     <section className="aboutSection">
@@ -118,7 +103,8 @@ export const AboutSection = () => {
         <div className="imgTextWrapper">
           <p id="longText">{fakeContent.mediumText[1]}</p>
           <img
-            id="secImg"
+            data-lag="0.5"
+            id="aboutImg"
             src={SecImgSrc}
             alt="second Img"
             width={300}

@@ -20,7 +20,7 @@ const FloatingCube = ({ position }) => {
   return (
     <mesh ref={meshRef} position={position}>
       <boxGeometry args={[0.6, 0.6, 0.6]} />
-      <meshStandardMaterial color={"#5e5d5d"} />
+      <meshStandardMaterial color={"rgba(126, 125, 125, 1)"} />
     </mesh>
   );
 };

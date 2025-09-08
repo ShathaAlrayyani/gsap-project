@@ -1,7 +1,26 @@
-import FirstImgSrc from "../assets/images/img1.jpg";
-import SecImgSrc from "../assets/images/img2.jpg";
-import ThirdImgSrc from "../assets/images/img3.jpg";
-import ForthImgSrc from "../assets/images/img4.jpg";
+import firstImg from "../assets/images/img1.jpg";
+import secImg from "../assets/images/img2.jpg";
+import thirdImg from "../assets/images/img3.jpg";
+import forthImg from "../assets/images/img4.jpg";
+import img5Src from '../assets/images/img5.webp'
+import img6Src from '../assets/images/img6.webp'
+import img7Src from '../assets/images/img7.jpg'
+import img8Src from '../assets/images/img8.webp'
+import img9Src from '../assets/images/img9.jpg'
+import img10Src from '../assets/images/img10.webp'
+import img11Src from '../assets/images/img11.webp'
+
+export const firstImgSrc = firstImg
+export const secImgSrc = secImg
+export const thirdImgSrc = thirdImg
+export const forthImgSrc = forthImg
+export const fifthImgSrc = img5Src
+export const sixthImgSrc = img6Src
+export const seventhImgSrc = img7Src
+export const eighthImgSrc = img8Src
+export const ninthImgSrc = img9Src
+export const tenthImgSrc = img10Src
+export const eleventhImg = img11Src
 
 export const fakeContent = {
   mediumText: [
@@ -26,19 +45,19 @@ export const fakeContent = {
 
 export const heroSliderCont = [
   {
-    src: FirstImgSrc,
+    src: firstImg,
     title: "Consectetur Adipiscing Elit",
   },
   {
-    src: SecImgSrc,
+    src: secImg,
     title: "Ut Enim Ad Minim Veniam",
   },
   {
-    src: ThirdImgSrc,
+    src: thirdImg,
     title: "Duis Aute Irure Dolor",
   },
   {
-    src: ForthImgSrc,
+    src: forthImg,
     title: "Sed Do Eiusmod Tempor",
   },
 ];

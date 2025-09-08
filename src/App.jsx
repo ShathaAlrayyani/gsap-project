@@ -48,9 +48,9 @@ const App = () => {
           <div>
             <AboutSection />
           </div>
-          {/* <div data-lag="1">
+          <div>
             <ProjectsSection />
-          </div> */}
+          </div>
         </div>
       </div>
     </main>
